@@ -1,0 +1,21 @@
+application: workshop-b-contest
+version: 1-0
+runtime: python
+api_version: 1
+
+default_expiration: "2d"
+
+handlers:
+- url: /static
+  static_dir: static
+  secure: always
+- url: /task-kickoff/.*
+  script: main.py
+- url: /tasks/.*
+  script: main.py
+  login: admin
+  secure: always
+  auth_fail_action: unauthorized
+- url: /.*
+  script: main.py
+  secure: always

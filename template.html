@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Contest! - Workshop B</title>
+    <style type="text/css">
+        * { border:0; padding:0; font-weight:normal;}
+        body {
+            font-family:Helvetica, "Helvetica Neue", Arial, Verdana;
+            background:#2d3235;
+            font-size:1.0em;
+            color:#fff;
+        }
+
+        h1 {
+            font-size:1.2em;
+            margin:60px 0 0 0;
+        }
+
+    </style>
+</head>
+<body>
+	<article>
+        <header>      
+            <h1>Workshop B - The Contest!</h1>
+        </header>        
+        <section>
+            <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+            <script type="text/javascript">
+                new TWTR.Widget({
+                  version: 2,
+                  type: 'search',
+                  search: '#RFTech',
+                  interval: 30000,
+                  title: 'Razorfish',
+                  subject: 'Tech Summit 2012 #RFTech',
+                  width: 'auto',
+                  height: 200,
+                  theme: {
+                    shell: {
+                      background: '#bf5330',
+                      color: '#fac524'
+                    },
+                    tweets: {
+                      background: '#ffffff',
+                      color: '#444444',
+                      links: '#1985b5'
+                    }
+                  },
+                  features: {
+                    scrollbar: true,
+                    loop: true,
+                    live: true,
+                    behavior: 'default'
+                  }
+                }).render().start();
+
+            </script>
+        </section>
+        <footer>
+        </footer>
+    </article>
+</body>
+</html>
