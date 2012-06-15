@@ -23,7 +23,8 @@ class BaseHandler(webapp.RequestHandler):
 
 	context = {}
 	now = None
-	ods_service_url = 'http://ec2-176-34-225-53.eu-west-1.compute.amazonaws.com:8080/kws/jaxrs/execute/'
+	#ods_service_url = 'http://ec2-176-34-225-53.eu-west-1.compute.amazonaws.com:8080/kws/jaxrs/execute/o2/'
+	ods_service_url = 'https://o2-poc-vital.razorfishsupport.com/kws/jaxrs/execute/o2/'
 	service_request_headers = {
 		'Content-Type':'application/xml'
 	}

@@ -24,38 +24,18 @@
             <h1>Workshop B - The Contest!</h1>
         </header>        
         <section>
-            <script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
-            <script type="text/javascript">
-                new TWTR.Widget({
-                  version: 2,
-                  type: 'search',
-                  search: '#RFTech',
-                  interval: 30000,
-                  title: 'Razorfish',
-                  subject: 'Tech Summit 2012 #RFTech',
-                  width: 'auto',
-                  height: 200,
-                  theme: {
-                    shell: {
-                      background: '#bf5330',
-                      color: '#fac524'
-                    },
-                    tweets: {
-                      background: '#ffffff',
-                      color: '#444444',
-                      links: '#1985b5'
-                    }
-                  },
-                  features: {
-                    scrollbar: true,
-                    loop: true,
-                    live: true,
-                    behavior: 'default'
-                  }
-                }).render().start();
+            {{ cakes_gallery }}
 
-            </script>
-        </section>
+            {% for x in cakes_gallery %}
+              <img src="{{ x }}" />
+            {% endfor %}
+
+            {% for key, value in cakes_gallery.items %}
+              {{ key }} / {{ value }}
+
+            {% endfor %}
+
+
         <footer>
         </footer>
     </article>
