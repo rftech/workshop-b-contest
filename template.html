@@ -24,15 +24,12 @@
             <h1>Workshop B - The Contest!</h1>
         </header>        
         <section>
-            {{ cakes_gallery }}
-
-            {% for x in cakes_gallery %}
-              <img src="{{ x }}" />
-            {% endfor %}
-
-            {% for key, value in cakes_gallery.items %}
-              {{ key }} / {{ value }}
-
+            {% for image in cakes_gallery.values.value %}
+              {% for x, y in image.attribute.items %}
+                {% if y != 'url' and y != 'text' %}
+                <img src="{{ y }}" /><br/>
+                {% endif %}
+              {% endfor %}
             {% endfor %}
 
 
